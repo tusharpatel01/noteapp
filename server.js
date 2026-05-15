@@ -33,7 +33,7 @@ app.get('/about', (req, res) => {
 
 // root - just a small landing message
 app.get('/', (req, res) => {
-  res.send('Notes API is running. See /openapi.json for the API docs.');
+  res.send('running fine.');
 });
 
 // 404 fallback
