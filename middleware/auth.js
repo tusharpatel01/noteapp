@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
+const JWT_SECRET = process.env.JWT_SECRET || 'tusharpatelsecretkey';
 
 // middleware to verify the jwt token from Authorization header
 function authenticate(req, res, next) {

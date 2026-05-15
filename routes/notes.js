@@ -4,10 +4,10 @@ const authenticate = require('../middleware/auth');
 
 const router = express.Router();
 
-// all routes here need authentication
+// all routes need authentication
 router.use(authenticate);
 
-// helper to shape note response (matches the format from the assignment)
+// helper to shape note response
 function formatNote(note) {
   if (!note) return null;
   return {

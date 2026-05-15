@@ -5,7 +5,7 @@ const { pool } = require('../db');
 
 const router = express.Router();
 
-const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
+const JWT_SECRET = process.env.JWT_SECRET || 'tusharpatelsecretkey';
 
 // quick email validation (not perfect but works for most cases)
 function isValidEmail(email) {
@@ -38,7 +38,7 @@ router.post('/register', async (req, res) => {
     // check if email is already taken
     const existing = await pool.query('SELECT id FROM users WHERE email = $1', [cleanEmail]);
     if (existing.rows.length > 0) {
-      return res.status(409).json({ message: "A user with this email already exists" });
+      return res.status(409).json({ message: "This email already exists" });
     }
 
     const passwordHash = await bcrypt.hash(password, 10);

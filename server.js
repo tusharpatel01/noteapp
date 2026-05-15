@@ -26,7 +26,7 @@ app.get('/about', (req, res) => {
     "name": "Tushar",
     "email": "tushar@gmail.com",
     "my features": {
-      "Pin Notes": "Users can pin/unpin important notes so they always show up at the top of their list. I picked this because in apps like Google Keep I always find myself wanting quick access to a few important notes without scrolling, and it's a small but really useful addition."
+      "Pin Notes": "Users can pin/unpin important notes so they always show up at the top of their list."
     }
   });
 });
